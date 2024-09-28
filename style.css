@@ -1,0 +1,417 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.header {
+    background-color: #0a5c36;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between; /* Maintain space between logo, nav, and login */
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centers the nav links */
+    gap: 3rem; /* Space between links */
+    margin: 0;
+    padding-right: 70px;
+ 
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight:lighter;
+}
+
+/* Style for the Login Logo */
+.login-logo {
+    display: inline-block; /* Keep it inline like a button */
+    text-decoration: none; /* Remove underline */
+}
+
+.login-logo img {
+    width: 50px; /* Adjust the width of the logo */
+    height: auto; /* Maintain the aspect ratio */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add hover effects */
+}
+
+.login-logo img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    opacity: 0.8; /* Slight opacity change on hover */
+}
+
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/cemetery.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* CSS */
+.button-71 {
+  background-color: #30aa44;
+  box-shadow: #333;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
+
+/* Packages Section */
+#packages {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#packages h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0a5c36; /* Optional: matches your site's palette */
+}
+
+/* Package Container */
+.package-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem; /* Space between each package */
+    flex-wrap: wrap; /* Ensure responsiveness by wrapping items on smaller screens */
+}
+
+/* Individual Package */
+.package {
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 25%; /* Adjust size of the package card */
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Image Resizing */
+.package img {
+    width: 100%; /* Make image take up full width of the package card */
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure the image fits nicely */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease;
+}
+
+/* Zoom on Hover */
+.package:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Package Hover Effect */
+.package:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.package h3 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: #000000; /* Match your site's palette */
+}
+
+.package p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .package-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package {
+        width: 80%; /* Adjust width for smaller screens */
+        margin-bottom: 2rem;
+    }
+}
+
+/* Section Styling */
+main section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.package-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+/* Image Zoom Effect */
+.zoom {
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+.zoom:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.package img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+/* Footer Styling */
+footer {
+    background-color: #0a5c36;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative; /* Allows positioning of the back-to-top icon */
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+    bottom: 2rem;    /* Positioning from the bottom */
+    right: 2rem;     /* Positioning from the right */
+    z-index: 100;    /* Make sure it stays on top of other elements */
+}
+
+.back-to-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #2d6a4f;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top a:hover {
+    background-color: #0a5c36; /* Color change on hover */
+}
+
+.back-to-top a svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white; /* Icon color */
+    transition: fill 0.3s ease;
+}
+
+.back-to-top a:hover svg {
+    fill: #fff; /* Optional: Change icon color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav.active ul {
+        display: flex;
+    }
+
+    .package-container {
+        flex-direction: column;
+    }
+
+    /* Style for the gallery section */
+    .gallery {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .gallery h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Container for horizontal gallery */
+    .horizontal-gallery-container {
+        display: flex;
+        flex-direction: row; /* Stack the images horizontally (left to right) */
+        justify-content: center; /* Center the images horizontally */
+        gap: 20px; /* Space between the images */
+    }
+
+    /* Style for each image in the gallery */
+    .mySlides img {
+        width: 100%; /* Adjust width of the images */
+        max-width: 300px; /* Optional: limit the maximum width of each image */
+        height: auto;
+        border-radius: 8px; /* Optional styling for image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    }
+}
+
+/* Jiggling Animation */
+@keyframes jiggle {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-2px);
+    }
+}
+
+.nav ul li a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav ul li a:hover {
+    animation: jiggle 1s ease; /* Apply jiggling animation on hover */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Review Section */
+#reviews {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem; /* Space between each review card */
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.review-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 25%; /* Adjust size of the review card */
+    cursor: pointer;
+}
+
+/* Zoom on Hover */
+.review-card:hover {
+    transform: scale(5.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.review-card blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* Responsive Design for Reviews Section */
+@media (max-width: 768px) {
+    .review-card {
+        max-width: 100%; /* Full width on smaller screens */
+        margin: 10px 0;
+    }
+    
+}
